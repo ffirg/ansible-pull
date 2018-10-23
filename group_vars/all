@@ -5,14 +5,7 @@
 ntpserver1: 0.uk.pool.ntp.org
 ntpserver2: 1.uk.pool.ntp.org
 
-# DEV environment specifics
 # Used by dns role...
-DEV_dnsserver1: 10.1.1.10
-DEV_dnsserver2: 8.8.8.8
-DEV_dnsserver3: 4.4.4.4
-
-# UNKNOWN environment specifics
-# Used by dns role...
-UNKNOWN_dnsserver1: 192.168.123.1
-UNKNOWN_dnsserver2: 8.8.8.8
-UNKNOWN_dnsserver3: 4.4.4.4
+dnsserver1: 192.168.123.1
+dnsserver2: 8.8.8.8
+dnsserver3: 4.4.4.4
