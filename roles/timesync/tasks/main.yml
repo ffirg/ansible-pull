@@ -4,7 +4,7 @@
   yum: 
     name: ntp
     state: present
-    
+
 - name: NTP enabled?
   service: 
     name: ntpd
@@ -15,4 +15,4 @@
     src: ntp.conf.j2
     dest: /etc/ntp.conf
   notify:
-    - restart time services
+    - restart time_services
