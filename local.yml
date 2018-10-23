@@ -9,4 +9,5 @@
   roles:
      - users
      - dns
-     - timesync
+     - { role: timesync, when: ansible_os_family == 'Redhat' }
+     
