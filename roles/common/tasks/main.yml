@@ -9,9 +9,9 @@
     state: present
     apend: yes
   with_items:
-    - {name: 'ansible', groups: 'wheel', comment: 'Ansible Runtime', uid: '1000' }
-    - {name: 'fred', groups: 'wheel', comment: 'Fred Bloggs', uid: '1001' }
-    - {name: 'phil', groups: 'wheel', comment: 'Phil Griffiths', uid: '1002' }
+    - "{name: 'ansible', groups: 'wheel', comment: 'Ansible Runtime', uid: '1000' }"
+    - "{name: 'fred', groups: 'wheel', comment: 'Fred Bloggs', uid: '1001' }"
+    - "{name: 'phil', groups: 'wheel', comment: 'Phil Griffiths', uid: '1002' }"
   tags:
     - users
 
