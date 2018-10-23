@@ -14,3 +14,7 @@
   service: 
     name: ntpd
     enabled: yes
+
+  notify:
+    - restart ntpd
+    

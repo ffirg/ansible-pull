@@ -3,3 +3,4 @@
   service:
     name: ntpd
     state: restarted
+  listen: "restart time services"

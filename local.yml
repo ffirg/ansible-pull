@@ -7,4 +7,4 @@
   connection: local # or ssh or paramiko
 
   roles:
-     - time
+     - timesync
