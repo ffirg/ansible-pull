@@ -3,11 +3,11 @@
   vars:
     platform-type: "{{ lookup('file', '/etc/platform') | default(UNKNOWN) }}"
 
-- name: Get platform environment
-  debug: msg="This is a {{ platform-type }} platform"
+    - name: Get platform environment
+    debug: msg="This is a {{ platform-type }} platform"
 
-- name: DNS configuration
-  template:
-    src: resolv.conf.j2
-    dest: /etc/resolv.conf
+    - name: DNS configuration
+    template:
+        src: resolv.conf.j2
+        dest: /etc/resolv.conf
 
