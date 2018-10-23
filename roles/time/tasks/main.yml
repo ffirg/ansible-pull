@@ -13,5 +13,4 @@
 - name: NTP enabled?
   service: 
     name: ntpd
-    state: started
     enabled: yes
