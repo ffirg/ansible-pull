@@ -7,4 +7,4 @@
   connection: local # or ssh or paramiko
 
   roles:
-     - { time, when: "ansible_os_family" = 'RedHat' }
+     - { time, when: "ansible_os_family == 'RedHat'" }
