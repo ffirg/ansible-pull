@@ -1,6 +1,6 @@
 ---
 
-- name: Mandatory user accounts
+- name: Baseline user accounts
   user: 
     name: "{{ item.name }}"
     groups: "{{ item.groups }}"
