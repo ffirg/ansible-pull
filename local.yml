@@ -8,5 +8,4 @@
 
   roles:
     # - common
-    - {role: time, when: "ansible_os_family = 'RedHat' }
-    
+    - {role: time, when: "ansible_os_family" = 'RedHat' }
