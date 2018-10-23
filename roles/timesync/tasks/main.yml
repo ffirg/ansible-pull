@@ -15,4 +15,4 @@
     src: ntp.conf.j2
     dest: /etc/ntp.conf
   notify:
-    - restart time_services
+    - restart "time services"

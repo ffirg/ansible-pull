@@ -1,6 +1,6 @@
 ---
-- name: restart time services
+- name: restart time_services
   service:
     name: ntpd
     state: restarted
-  listen: "restart time services"
+  listen: "time services"
