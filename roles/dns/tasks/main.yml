@@ -2,7 +2,7 @@
 
 - name: Get platform environment
   debug: 
-    msg: "This is a {{ platform-type }} platform"
+    msg: "This is a {{ platform_type }} platform"
 
 - name: DNS configuration
   template:
