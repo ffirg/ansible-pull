@@ -7,5 +7,6 @@
   connection: local # or ssh or paramiko
 
   roles:
+     - users
      - dns
      - timesync

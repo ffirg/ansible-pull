@@ -1,0 +1,8 @@
+---
+
+- name: Mandatory user accounts
+  user: name={{ item.name }} state=present groups={{ item.groups }}
+  with_items:
+    - {name: 'ansible', groups: 'wheel' }
+    - {name: 'fred', groups: 'wheel' }
+    - {name: 'phil', groups: 'wheel' }
