@@ -1,7 +1,7 @@
 ---
 
-vars:
-  platform_type: "{{ lookup('file', '/etc/platform') | default(UNKNOWN) }}"
+  vars:
+    platform_type: "{{ lookup('file', '/etc/platform') | default(UNKNOWN) }}"
 
 - name: Get platform environment
   debug:
