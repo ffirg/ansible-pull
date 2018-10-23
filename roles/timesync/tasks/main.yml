@@ -14,5 +14,7 @@
   template:
     src: ntp.conf.j2
     dest: /etc/ntp.conf
+    owner: root
+    mode: 0644
   notify:
     "restart time services"

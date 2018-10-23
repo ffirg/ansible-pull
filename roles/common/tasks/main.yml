@@ -1,16 +1,25 @@
 ---
 
 - name: Mandatory user accounts
-  user: name={{ item.name }} state=present groups={{ item.groups }}
+  user: 
+    name: {{ item.name }}
+    groups: {{ item.groups }}
+    comment: {{ item.comment }}
+    uid: {{ item.uid }}
+    state: present
+    apend: yes
   with_items:
-    - {name: 'ansible', groups: 'wheel' }
-    - {name: 'fred', groups: 'wheel' }
-    - {name: 'phil', groups: 'wheel' }
+    - {name: 'ansible', groups: 'wheel', comment: 'Ansible Runtime', uid: '1000' }
+    - {name: 'fred', groups: 'wheel', comment: 'Fred Bloggs', uid: '1001' }
+    - {name: 'phil', groups: 'wheel', comment: 'Phil Griffiths', uid: '1002' }
   tags:
     - users
 
 - name: Core firewall ports
-  firewalld: port={{ item }} permanent=true state=enabled
+  firewalld: 
+    port: {{ item }}
+    permanent: true
+    state: enabled
   with_items:
     - 22/tcp
     - 443/tcp
