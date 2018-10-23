@@ -2,7 +2,7 @@
 
 - name: NTP installed?
   yum: 
-    name: ntpd
+    name: ntp
     state: present
 
 - name: NTP configuration
