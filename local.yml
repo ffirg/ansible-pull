@@ -7,7 +7,7 @@
   connection: local # or ssh or paramiko
 
   roles:
-     - users
+     - common
      - dns
      - { role: timesync, when: ansible_os_family == 'RedHat' }
 
