@@ -1,9 +1,5 @@
 ---
 
-- name: Get platform environment
-  debug: 
-    msg: "This is a {{ platform_type }} platform"
-
 - name: DNS configuration
   template:
     src: resolv.conf.j2
