@@ -1,5 +1,9 @@
 ---
 
+- name: Get platform environment
+  debug:
+    msg: "This is a {{ lookup('file', '/etc/platform') }} plafform"
+    
 - name: DNS configuration
   template:
     src: resolv.conf.j2
