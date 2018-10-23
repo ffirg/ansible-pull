@@ -1,0 +1,12 @@
+---
+# Example for Ansible Pull
+
+- name: Ansible Working in Pull Mode
+  hosts: localhost
+  user: root
+  connection: local # or ssh or paramiko
+
+  roles:
+    # - common
+    - {role: time, when: "ansible_os_family = 'RedHat' }
+    

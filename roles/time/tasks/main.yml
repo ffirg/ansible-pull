@@ -1,0 +1,17 @@
+---
+
+- name: Ensure NTP is installed
+  yum: 
+    name: ntpd
+    state: present
+
+- name: NTP configuration file settings
+  template:
+    src: ntpd.conf.j2
+    dest: /etc/ntpd.conf
+ 
+ - name: Ensure NTP is enabled
+   service: 
+     name: ntpd
+     state: started
+     enabled: yes
