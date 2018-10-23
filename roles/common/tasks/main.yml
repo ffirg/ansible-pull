@@ -6,3 +6,17 @@
     - {name: 'ansible', groups: 'wheel' }
     - {name: 'fred', groups: 'wheel' }
     - {name: 'phil', groups: 'wheel' }
+  tags:
+    - users
+
+- name: Core firewall ports
+  firewalld: port={{ item }} permanent=true state=enabled
+  with_items:
+    - 22/tcp
+    - 443/tcp
+  notify:
+    "restart firewall"
+  tags:
+    - firewall
+    
+
