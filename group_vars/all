@@ -4,3 +4,9 @@
 # Used by timesync role...
 ntpserver1: 0.uk.pool.ntp.org
 ntpserver2: 1.uk.pool.ntp.org
+
+# Used by dns role...
+nameserver1: 192.168.123.1
+nameserver2: 8.8.8.8
+namerserver3: 4.4.4.4
+
