@@ -6,6 +6,7 @@ ntpserver1: 0.uk.pool.ntp.org
 ntpserver2: 1.uk.pool.ntp.org
 
 # Used by dns role...
-dnsserver1: 192.168.123.1
+search 0rm5v1to1djuznqdoa0kiekgye.fx.internal.cloudapp.net
+dnsserver1: 168.63.129.16
 dnsserver2: 8.8.8.8
 dnsserver3: 4.4.4.4
