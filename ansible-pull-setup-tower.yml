@@ -24,7 +24,7 @@
 
   tasks:
 
-    - name: Enable a RHSM repository
+    - name: Enable repos for ansible
       rhsm_repository:
         name: "rhel-7-server-ansible-{{ansible_major_version}}-rpms"
 
@@ -39,7 +39,7 @@
         state: directory
         owner: root
         group: root
-        mode: =0751
+        mode: 0751
 
     - name: Create crontab entry to clone/pull git repository
       template: 
