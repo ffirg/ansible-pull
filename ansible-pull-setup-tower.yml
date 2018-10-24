@@ -35,7 +35,7 @@
 
     - name: Create local directory to work from
       file: 
-        path: {{workdir}}
+        path: "{{workdir}}"
         state: directory
         owner: root
         group: root
