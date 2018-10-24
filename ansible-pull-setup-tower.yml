@@ -4,7 +4,7 @@
 
   vars:
 
-    ansible-major-version: 2
+    ansible_major_version: '2'
 
     # schedule is fed directly to cron
     schedule: '*/15 * * * *'
@@ -26,7 +26,7 @@
 
     - name: Enable a RHSM repository
       rhsm_repository:
-        name: "rhel-7-server-ansible-{{ansible-major-version}}-rpms"
+        name: "rhel-7-server-ansible-{{ansible_major_version}}-rpms"
 
     - name: Install ansible
       yum: 
