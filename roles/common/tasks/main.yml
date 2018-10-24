@@ -1,8 +1,8 @@
 ---
 
-- name: Get platform environment
-  debug: 
-    msg: "This is a {{ platform_type }} platform"
+#- name: Get platform environment
+#  debug: 
+#    msg: "This is a {{ platform_type }} platform"
     
 - name: Baseline user accounts
   user: 
