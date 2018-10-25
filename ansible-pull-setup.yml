@@ -36,7 +36,9 @@
   tasks:
 
     - name: Install ansible, git
-      yum: pkg="{{ item }} state=installed
+      yum: 
+        pkg: "{{ item }}"
+        state: installed
       loop:
         - ansible
         - git
