@@ -1,23 +1,23 @@
 ---
 
-- name: Get platform environment
-  debug: 
-    msg: "This is a {{ platform_type }} platform"
+#- name: Get platform environment
+#  debug: 
+#    msg: "This is a {{ platform_type }} platform"
     
-- name: Baseline user accounts
-  user: 
-    name: "{{ item.name }}"
-    groups: "{{ item.groups }}"
-    comment: "{{ item.comment }}"
-    uid: "{{ item.uid }}"
-    state: present
-    append: yes
-  loop:
-    - { name: 'phil', groups: 'users, wheel', comment: 'Phil Griffiths', uid: '1000' }
-    - { name: 'fred', groups: 'users', comment: 'Fred Bloggs', uid: '1003' }
+#- name: Baseline user accounts
+#  user: 
+#    name: "{{ item.name }}"
+#    groups: "{{ item.groups }}"
+#    comment: "{{ item.comment }}"
+#    uid: "{{ item.uid }}"
+#    state: present
+#    append: yes
+#  loop:
+#    - { name: 'phil', groups: 'users, wheel', comment: 'Phil Griffiths', uid: '1000' }
+#    - { name: 'fred', groups: 'users', comment: 'Fred Bloggs', uid: '1003' }
   
-  tags:
-    - users
+#  tags:
+#    - users
 
 - name: Core firewall ports
   firewalld: 
