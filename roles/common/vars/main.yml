@@ -1,5 +1,4 @@
 ---
 
-platform_type: "{{ lookup('file', '/etc/platform') | default(UNKNOWN) }}"
-
+platform_file: /etc/platform
 

@@ -1,8 +1,12 @@
 ---
 
-- name: Get platform environment
-  debug: 
-    msg: "This is a {{ platform_type }} platform"
+- stat:
+    path: "{{ platform_file }}"
+  register: pfile
+
+- debug:
+    msg: This is a "{{ lookup ('file', '{{ platform_file }}') }}" platform
+  when: pfile.stat.readable is defined
     
 - name: Baseline user accounts
   user: 
