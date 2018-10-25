@@ -5,7 +5,7 @@
   register: pfile
 
 - debug:
-    msg: "This is a {{ lookup ('file', '{{ platform_file }}') }} platform"'
+    msg: "This is a {{ lookup ('file', '{{ platform_file }}') }} platform"
   when: pfile.stat.readable is defined
     
 - name: Baseline user accounts
