@@ -35,7 +35,7 @@
 
   tasks:
 
-    - name: Install ansible, git
+    - name: Install ansible git
       yum: 
         pkg: "{{ item }}"
         state: installed
