@@ -28,10 +28,11 @@
       rhsm_repository:
         name: "rhel-7-server-ansible-{{ansible_major_version}}-rpms"
 
-    - name: Install ansible
-      yum: 
-        pkg: ansible 
-        state: installed
+    - name: Install ansible, git
+      yum: pkg="{{ item }} state=installed
+      loop:
+        - ansible
+        - git
 
     - name: Create local directory to work from
       file: 
